@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang = "en"><!--向搜索引擎表示该页面是html语言，且语言为英语-->
+<head>
+    <meta charset = "UTF-8">
+    <title>select color</title>
+</head>
+<body>
+    <input type = "color" id="color" onchange="changeColor()">
+    <!--选择输入类型为颜色-->
+
+    <span id="colorInfo"></span>
+</body>
+
+<script type="text/javascript">
+    var color = document.getElementById("color");
+    //通过使用getElementById()来访问<color>元素
+    var colorInfo=document.getElementById("colorInfo");
+    colorInfo.style.color=color.value; //给span的字体加颜色
+    colorInfo.innerHTML=color.value;   //给span加<color>的值
+    function changeColor(){//改变颜色的事件
+        colorInfo.style.color=color.value;
+        colorInfo.innerHTML=color.value;
+    }
+</script>
+</html>
